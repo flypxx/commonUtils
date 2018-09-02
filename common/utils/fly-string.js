@@ -11,3 +11,11 @@ exports.randomString = function(len) {
   }
   return str
 }
+
+/**
+ * 转移字符串中的['<', '>', '"', '\'']为安全字符
+ * @param {String} str
+ */
+exports.filterString = function(str) {
+  return str.replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g, "&quot;").replace(/'/g, "&#039;")
+}
