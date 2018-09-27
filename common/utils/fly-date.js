@@ -57,3 +57,12 @@ export const dateFormat = (time, fmt) => {
   }
   return fmt
 }
+
+/**
+ * 获取当天是星期几
+ * @param {Date} time
+ */
+export const getDayDesc = (time = new Date()) => {
+  let desc = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六']
+  return desc[time.getDay()]
+}
